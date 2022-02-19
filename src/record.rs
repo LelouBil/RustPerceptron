@@ -1,3 +1,4 @@
+use ndarray::{Array1, Array2};
 use crate::record::PerceptronLabel::{Negative, Positive};
 
 #[derive(Debug)]
@@ -25,8 +26,9 @@ impl From<f64> for PerceptronLabel {
     }
 }
 
+#[derive(Debug)]
 pub struct PerceptronKnowlege{
-    vector: Vec<f64>
+    pub(crate) vector: Array1<f64>
 }
 
 #[derive(Debug)]
